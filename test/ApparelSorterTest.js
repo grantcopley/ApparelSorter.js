@@ -10,9 +10,9 @@ describe("sortSizes() functionality", function() {
 
     it("should sort XXL as if it were 2XL", function() {
         var sizes = ["3XL","1XL","XXL"];
-        assert.deepEqual(["1XL", "XXL", "3XL"] ,apparelSorter.sortSizes(sizes));
+        assert.deepEqual(["1XL", "XXL", "3XL"], apparelSorter.sortSizes(sizes));
         var sizes = ["3XL","1XL","2XL"];
-        assert.deepEqual(["1XL", "2XL", "3XL"] ,apparelSorter.sortSizes(sizes));
+        assert.deepEqual(["1XL", "2XL", "3XL"], apparelSorter.sortSizes(sizes));
     });
 
     it("should sort extended sizes", function() {
@@ -28,6 +28,13 @@ describe("sortSizes() functionality", function() {
     it("should sort numeric sizes", function() {
         var sizes = ["18W", "16", "14", "12", "10", "8", "6", "4", "2", "0"];
         assert.deepEqual(["0","2","4","6","8","10","12","14","16","18W"], apparelSorter.sortSizes(sizes));
+    });
+
+    it("should sort short sleeve and long sleeve", function() {
+        var sizes = ["LS", "SS"];
+        assert.deepEqual(["SS","LS"], apparelSorter.sortSizes(sizes));
+        var sizes = ["Long Sleeve", "Short Sleeve"];
+        assert.deepEqual(["Short Sleeve","Long Sleeve"], apparelSorter.sortSizes(sizes));
     });
 
 });
