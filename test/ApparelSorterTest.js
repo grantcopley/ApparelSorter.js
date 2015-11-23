@@ -3,6 +3,10 @@ var assert = require('assert');
 
 describe("sort() functionality", function() {
 
+    it("should return empty array if not passed any sizes", function() {
+        assert.deepEqual([], apparelSorter.sort());
+    });
+
     it("should sort standard abbreviated sizes", function() {
         var sizes = ["XL", "L", "S", "M", "XS","3XL","1XL","2XL"];
         assert.deepEqual(["XS","S","M","L","XL","1XL","2XL","3XL"], apparelSorter.sort(sizes));
