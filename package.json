@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/gcopley/apparelsorter.js.git"
   },
-  "author": "Grant Copley <grant@clocktowerlogic.com> (http://clocktowerlogic.com)",
+  "author": "Grant Copley <gcopley@gmail.com>",
   "license": "bsd",
   "devDependencies": {
     "mocha": "^2.2.5"
