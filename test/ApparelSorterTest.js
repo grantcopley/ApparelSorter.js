@@ -41,6 +41,25 @@ describe("sort() functionality", function() {
         assert.deepEqual(["Short Sleeve","Long Sleeve"], apparelSorter.sort(sizes));
     });
 
+    it("should sort ranges such as 28-30, 32-34, etc.", function() {
+        var sizes = ["20-22", "16-18", "10-12", "16W-18W"];
+        assert.deepEqual(["10-12", "16-18", "16W-18W", "20-22"], apparelSorter.sort(sizes));
+    });
+
+    it("should sort talls", function() {
+        var sizes = ["2XLT", "XLT", "LT"];
+        assert.deepEqual(["LT", "XLT", "2XLT"], apparelSorter.sort(sizes));
+    });
+
+    it("should sort unfinished lengths", function() {
+        var sizes = ["36","34","35","36U"];
+        assert.deepEqual(["34","35","36","36U"], apparelSorter.sort(sizes));
+        var sizes = ["36","34","35","36 Unfinished"];
+        assert.deepEqual(["34","35","36","36 Unfinished"], apparelSorter.sort(sizes));
+        var sizes = ["36","34","35","36 Unf"];
+        assert.deepEqual(["34","35","36","36 Unf"], apparelSorter.sort(sizes));
+    });
+
     it("calling sortSizes() function instead of sort() should still work", function() {
         var sizes = ["3XL","1XL","XXL"];
         assert.deepEqual(["1XL", "XXL", "3XL"], apparelSorter.sortSizes(sizes));
