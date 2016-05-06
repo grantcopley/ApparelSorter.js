@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/gcopley/apparelsorter.js.svg?branch=master)](https://travis-ci.org/gcopley/apparelsorter.js)
+
 # ApparelSorter.js
 ApparelSorter.js is a set of functions written in JavaScript that provide functionality for sorting apparel sizes such as XS, S, M, L. It can also sort numeric sizes such as 12, 14, 16W, 18W, etc.
 
