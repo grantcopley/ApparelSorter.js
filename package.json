@@ -3,7 +3,7 @@
   "version": "0.2.1",
   "description": "ApparelSorter.js is a set of functions written in JavaScript that provide sorting for apparel sizes such as XS, S, M, L. It can also sort numeric sizes such as 12, 14, 16W, 18W, etc.",
   "scripts": {
-    "test": "node_modules/.bin/mocha -w"
+    "test": "node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
