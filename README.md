@@ -1,11 +1,15 @@
 [![Build Status](https://travis-ci.org/gcopley/apparelsorter.js.svg?branch=master)](https://travis-ci.org/gcopley/apparelsorter.js)
 
 # ApparelSorter.js
-ApparelSorter.js is a set of functions written in JavaScript that provide functionality for sorting apparel sizes such as XS, S, M, L. It can also sort numeric sizes such as 12, 14, 16W, 18W, etc.
+
+### The Problem
+Trying to sort sizing data can be a pain. Computers don't understand XS is smaller than SM unless we tell them somehow. Computers also don't understand that 'S', 'SM', and 'Small' are all, well, Small.
+
+ApparelSorter.js aims to fix that and make sorting apparel sizes a cinche.
 
 
 ### Suggested Use
-ApparelSorter.js can be helpful in e-commerce applications or with any system where apparel data needs to be displayed with the sizes listed in correct order.
+ApparelSorter.js can be extremely helpful in e-commerce applications or with any system where apparel data needs to be displayed with the sizes listed in correct order. It's also great if you are working with inconsistent sizing data (some products have 'SM' and others have 'Small')
 
 
 ### Usage
