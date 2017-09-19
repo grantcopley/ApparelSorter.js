@@ -27,6 +27,9 @@ const index = sorter.numberify('XS'); // returns 6
 const index = sorter.numberify('SM'); // returns 9
 ```
 
+### Requirements
+- Node.js v.1.8.4 or greater (may work with earlier versions of Node but have not tested)
+
 
 ### Installation
 Using npm is the preferred and easiest way to install.
