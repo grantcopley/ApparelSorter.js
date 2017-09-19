@@ -6,7 +6,7 @@
 ### The Problem
 Trying to sort sizing data can be a pain. Computers don't understand XS is smaller than SM unless we tell them somehow. Computers also don't understand that 'S', 'SM', and 'Small' are all, well, Small.
 
-ApparelSorter.js aims to fix that and make sorting apparel sizes a cinche.
+ApparelSorter.js aims to fix that and make sorting apparel sizes a cinch.
 
 
 ### Suggested Use
@@ -40,7 +40,7 @@ Help us make ApparelSorter.js better! Feel free to submit a pull request or to s
 
 ### Testing
 This project uses Mocha to run the tests included with the project.
-You can run the tests by simply navigation to the node_modules/apparel-sorter folder and typing one of the below commands
+You can run the tests by simply navigating to the node_modules/apparel-sorter folder and typing one of the below commands:
 ```
 $ npm test
 $ mocha
