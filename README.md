@@ -23,11 +23,15 @@ You can also return the sort index. The sort index could then, for example, be s
 var index = sorter.index("XS"); // returns a number
 ```
 
+
 ### Installation
 Using npm is the preferred and easiest way to install.
 ```
 npm install apparel-sorter
 ```
+
+### Contributing
+Help us make ApparelSorter.js better! Feel free to submit a pull request or to submit issues if you find ApparelSorter isn't getting things done for you.
 
 ### Testing
 This project uses Mocha to run the tests included with the project.
