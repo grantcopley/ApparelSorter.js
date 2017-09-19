@@ -15,12 +15,12 @@ ApparelSorter.js can be extremely helpful in e-commerce applications or with any
 ### Usage
 To simply sort an array of sizes, you can call the sortSizes() function.
 ```javascript
-var sorter = require('apparel-sorter');
-var sizes = sorter.sort(["XL", "L", "S", "M", "XS"]); // returns ["XS","S","M","L","XL"]
+const sorter = require('apparel-sorter');
+const sizes = sorter.sort(["XL", "L", "S", "M", "XS"]); // returns ["XS","S","M","L","XL"]
 ```
 You can also return the sort index. The sort index could then, for example, be stored in a database for easy sorting in SQL.
 ```javascript
-var index = sorter.index("XS"); // returns a number
+const index = sorter.index("XS"); // returns a number
 ```
 
 
