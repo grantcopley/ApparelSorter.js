@@ -2,6 +2,7 @@
 
 # ApparelSorter.js
 
+
 ### The Problem
 Trying to sort sizing data can be a pain. Computers don't understand XS is smaller than SM unless we tell them somehow. Computers also don't understand that 'S', 'SM', and 'Small' are all, well, Small.
 
@@ -16,11 +17,14 @@ ApparelSorter.js can be extremely helpful in e-commerce applications or with any
 To simply sort an array of sizes, you can call the sortSizes() function.
 ```javascript
 const sorter = require('apparel-sorter');
-const sizes = sorter.sort(["XL", "L", "S", "M", "XS"]); // returns ["XS","S","M","L","XL"]
+
+const sizes = sorter.sort(['XL', 'L', 'SM', 'Medium', 'X Small']); // returns ['X Small','SM','Medium','L','XL']
 ```
-You can also return the sort index. The sort index could then, for example, be stored in a database for easy sorting in SQL.
+You can also numberify a size. This returns a sorted number that you can use as needed. For example, you could store the returned value in a database for easy sorting in SQL.
 ```javascript
-const index = sorter.index("XS"); // returns a number
+const index = sorter.numberify('XS'); // returns 6
+
+const index = sorter.numberify('SM'); // returns 9
 ```
 
 
@@ -32,6 +36,7 @@ npm install apparel-sorter
 
 ### Contributing
 Help us make ApparelSorter.js better! Feel free to submit a pull request or to submit issues if you find ApparelSorter isn't getting things done for you.
+
 
 ### Testing
 This project uses Mocha to run the tests included with the project.

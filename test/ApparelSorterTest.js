@@ -69,7 +69,7 @@ describe("sort() functionality", function() {
 
 });
 
-describe("index() functionality", function() {
+describe("numberify() functionality", function() {
 
     it("should return a numeric value for various sizes", function() {
         assert(apparelSorter.index("XS") > 0);
@@ -86,6 +86,16 @@ describe("index() functionality", function() {
         assert(apparelSorter.sizeIndex("XS") > 0);
         assert(apparelSorter.sizeIndex("Small") > 0);
         assert(apparelSorter.sizeIndex("Large") > 0);
+    });
+
+});
+
+describe("index() functionality", function() {
+
+    it("should return same result as calling index()", function() {
+        assert(apparelSorter.index("XS") == apparelSorter.numberify("XS"));
+        assert(apparelSorter.index("SM") == apparelSorter.numberify("SM"));
+        assert(apparelSorter.index("Large") == apparelSorter.numberify("Large"));
     });
 
 });
