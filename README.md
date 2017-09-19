@@ -14,7 +14,7 @@ ApparelSorter.js can be extremely helpful in e-commerce applications or with any
 
 
 ### Usage
-To simply sort an array of sizes, you can call the sortSizes() function.
+To simply sort an array of sizes, you can call the sort() function.
 ```javascript
 const sorter = require('apparel-sorter');
 
