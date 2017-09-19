@@ -47,5 +47,7 @@ $ mocha
 ```
 
 ### License
-Please read the License.txt file included with this distribution.
+BSD 2 License - Free for commercial use, modification, distribution, and private use.
+
+Please see the included License.txt for full License information.
 
