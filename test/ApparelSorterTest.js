@@ -37,9 +37,27 @@ describe("sort() functionality", function() {
     });
 
     it("should sort numeric sizes", function() {
-        var sizes = ["18W", "16", "14", "12", "10", "8", "6", "4", "2", "0"];
-        assert.deepEqual(["0","2","4","6","8","10","12","14","16","18W"], apparelSorter.sort(sizes));
-    });
+		var sizes = ["18W", "16", "14", "12", "10", "8", "6", "4", "2", "0"];
+		assert.deepEqual(["0","2","4","6","8","10","12","14","16","18W"], apparelSorter.sort(sizes));
+	});
+
+	it("should sort EU shoe sizes", function() {
+		var sizes = ["EU 42", "EU 34", "EU 36", "EU 40", "EU 39"];
+		assert.deepEqual(["EU 34", "EU 36", "EU 39", "EU 40", "EU 42"], apparelSorter.sort(sizes));
+
+		var sizes = ["EUR 42", "EUR 34", "EUR 36", "EUR 40", "EUR 39"];
+		assert.deepEqual(["EUR 34", "EUR 36", "EUR 39", "EUR 40", "EUR 42"], apparelSorter.sort(sizes));
+	});
+
+	it("should sort US shoe sizes", function() {
+		var sizes = ["US 6", "US 7", "US 12", "US 10", "US 8"];
+		assert.deepEqual(["US 6", "US 7", "US 8", "US 10", "US 12"], apparelSorter.sort(sizes));
+	});
+
+	it("should sort half show sizes", function() {
+		var sizes = ["US 6", "US 7.5", "US 12", "US 10.5", "US 8"];
+		assert.deepEqual(["US 6", "US 7.5", "US 8", "US 10.5", "US 12"], apparelSorter.sort(sizes));
+	});
 
     it("should sort short sleeve and long sleeve", function() {
         var sizes = ["LS", "SS"];
