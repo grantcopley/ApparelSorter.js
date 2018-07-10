@@ -17,7 +17,14 @@ describe("sort() functionality", function() {
         assert.deepEqual(["1XL", "XXL", "3XL"], apparelSorter.sort(sizes));
         var sizes = ["3XL","1XL","2XL"];
         assert.deepEqual(["1XL", "2XL", "3XL"], apparelSorter.sort(sizes));
+	    var sizes = ["XXXL","XXL","XL","3XL","1XL","2XL"];
+	    assert.deepEqual(["XL","1XL","2XL","XXL","3XL","XXXL"], apparelSorter.sort(sizes));
     });
+
+	it("should sort XXL before XXXL", function() {
+		var sizes = ["XXXL","XXL"];
+		assert.deepEqual(["XXL","XXXL"], apparelSorter.sort(sizes));
+	});
 
     it("should sort extended sizes", function() {
         var sizes = ["6X","5X","9XL","3XL", "2X","1X","18X","13X"];
@@ -30,9 +37,27 @@ describe("sort() functionality", function() {
     });
 
     it("should sort numeric sizes", function() {
-        var sizes = ["18W", "16", "14", "12", "10", "8", "6", "4", "2", "0"];
-        assert.deepEqual(["0","2","4","6","8","10","12","14","16","18W"], apparelSorter.sort(sizes));
-    });
+		var sizes = ["18W", "16", "14", "12", "10", "8", "6", "4", "2", "0"];
+		assert.deepEqual(["0","2","4","6","8","10","12","14","16","18W"], apparelSorter.sort(sizes));
+	});
+
+	it("should sort EU shoe sizes", function() {
+		var sizes = ["EU 42", "EU 34", "EU 36", "EU 40", "EU 39"];
+		assert.deepEqual(["EU 34", "EU 36", "EU 39", "EU 40", "EU 42"], apparelSorter.sort(sizes));
+
+		var sizes = ["EUR 42", "EUR 34", "EUR 36", "EUR 40", "EUR 39"];
+		assert.deepEqual(["EUR 34", "EUR 36", "EUR 39", "EUR 40", "EUR 42"], apparelSorter.sort(sizes));
+	});
+
+	it("should sort US shoe sizes", function() {
+		var sizes = ["US 6", "US 7", "US 12", "US 10", "US 8"];
+		assert.deepEqual(["US 6", "US 7", "US 8", "US 10", "US 12"], apparelSorter.sort(sizes));
+	});
+
+	it("should sort half show sizes", function() {
+		var sizes = ["US 6", "US 7.5", "US 12", "US 10.5", "US 8"];
+		assert.deepEqual(["US 6", "US 7.5", "US 8", "US 10.5", "US 12"], apparelSorter.sort(sizes));
+	});
 
     it("should sort short sleeve and long sleeve", function() {
         var sizes = ["LS", "SS"];
@@ -72,10 +97,16 @@ describe("sort() functionality", function() {
 describe("numberify() functionality", function() {
 
     it("should return a numeric value for various sizes", function() {
-        assert(apparelSorter.index("XS") > 0);
-        assert(apparelSorter.index("Small") > 0);
-        assert(apparelSorter.index("Large") > 0);
-    });
+		assert(apparelSorter.index("XS") > 0);
+		assert(apparelSorter.index("Small") > 0);
+		assert(apparelSorter.index("Large") > 0);
+	});
+
+	it("should return correct numeric value for XL, XXL and XXXL", function() {
+	    assert.equal(apparelSorter.index("XL"), 32);
+		assert.equal(apparelSorter.index("XXL"), 42);
+		assert.equal(apparelSorter.index("XXXL"), 44);
+	});
 
     it("should return zero for unknown size", function() {
         assert(apparelSorter.index("UnknownSize") == 0);
