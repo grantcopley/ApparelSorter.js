@@ -3,7 +3,8 @@
   "version": "0.3.0",
   "description": "ApparelSorter.js is a set of functions written in JavaScript that provide sorting for apparel sizes such as XS, S, M, L. It can also sort numeric sizes such as 12, 14, 16W, 18W, etc.",
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "node_modules/.bin/mocha",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha"
   },
   "repository": {
     "type": "git",
@@ -12,6 +13,7 @@
   "author": "Grant Copley <gcopley@gmail.com>",
   "license": "bsd",
   "devDependencies": {
+    "istanbul": "^0.4.5",
     "mocha": "^2.2.5"
   }
 }
