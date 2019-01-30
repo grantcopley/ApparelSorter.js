@@ -39,7 +39,7 @@ npm install apparel-sorter
 
 ### Contributing
 Help us make ApparelSorter.js better! Feel free to submit a pull request or to submit issues if you find ApparelSorter isn't getting things done for you.
-
+Please be sure to submit tests for all your changes so we can stay at 100% tested code coverage.
 
 ### Testing
 This project uses Mocha to run the tests included with the project.
