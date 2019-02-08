@@ -1,7 +1,8 @@
+![ApparelSorter.js](/logo.png)
+
 [![Build Status](https://travis-ci.org/gcopley/apparelsorter.js.svg?branch=master)](https://travis-ci.org/gcopley/apparelsorter.js)
 
-# ApparelSorter.js
-
+# Sorts apparel sizes such as XS, S, M, L, numeric sizes and more.
 
 ### The Problem
 Trying to sort sizing data can be a pain. Computers don't understand XS is smaller than SM unless we tell them somehow. Computers also don't understand that 'S', 'SM', and 'Small' are all, well, Small.
