@@ -48,7 +48,7 @@ You can run the tests by simply navigating to the node_modules/apparel-sorter fo
 ```
 $ npm test
 $ mocha
-$ npm run-script coverage
+$ npm run coverage
 ```
 
 ### License
