@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gcopley/apparelsorter.js.git"
+    "url": "https://github.com/gaclab/ApparelSorter.js"
   },
   "author": "Grant Copley <gcopley@gmail.com>",
   "license": "bsd",
