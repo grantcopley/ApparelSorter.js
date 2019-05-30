@@ -1,4 +1,4 @@
-![ApparelSorter.js](/logo.png)
+![ApparelSorter.js](/logocurrent.png)
 
 [![Build Status](https://travis-ci.org/gaclab/ApparelSorter.js.svg?branch=master)](https://travis-ci.org/gaclab/ApparelSorter.js)
 
