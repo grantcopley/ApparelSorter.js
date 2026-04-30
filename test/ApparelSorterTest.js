@@ -12,6 +12,21 @@ describe("sort() functionality", function() {
         assert.deepEqual(["XS","S","M","L","XL","1XL","2XL","3XL"], apparelSorter.sort(sizes));
     });
 
+    it("should sort XXXS before XXS", function() {
+        var sizes = ["XXS", "XXXS", "XS", "S"];
+        assert.deepEqual(["XXXS", "XXS", "XS", "S"], apparelSorter.sort(sizes));
+    });
+
+    it("should sort 3XS before XXS", function() {
+        var sizes = ["XXS", "3XS", "XS", "S"];
+        assert.deepEqual(["3XS", "XXS", "XS", "S"], apparelSorter.sort(sizes));
+    });
+
+    it("should sort XXXXXXXXL (8XL) after XXXXXXXL (7XL)", function() {
+        var sizes = ["XXXXXXXXL", "XXXXXXXL", "XXXXXL"];
+        assert.deepEqual(["XXXXXL", "XXXXXXXL", "XXXXXXXXL"], apparelSorter.sort(sizes));
+    });
+
     it("should sort XXL as if it were 2XL", function() {
         var sizes = ["3XL","1XL","XXL"];
         assert.deepEqual(["1XL", "XXL", "3XL"], apparelSorter.sort(sizes));
